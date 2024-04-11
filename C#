@@ -1,0 +1,109 @@
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //MostraMaior();
+            //testeCondicionalComElse();
+            //testeCondicionalSimples();
+            OrdemCrescente();
+            Console.ReadKey();
+        }
+        static void OrdemCrescente()
+        {
+            double A, B;
+            Console.WriteLine("Digite um número: ");
+            string sNum = Console.ReadLine();
+            if (double.TryParse(sNum, out A) == true)
+            {
+                Console.WriteLine("Digite um número: ");
+                string sNum1 = Console.ReadLine();
+                if (double.TryParse(sNum1, out B) == true)
+                {
+                    Console.WriteLine("A ordem crescente dos números é: " + (A > B ? (A, B) : (B, A)));
+                                       
+                }
+                else
+                {
+                    Console.WriteLine("Valor inválido!");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido!");
+            }
+        }
+        static void MostraMaior()
+        {
+            int A, B;
+            Console.WriteLine("Digite um número inteiro: ");
+            string sNum = Console.ReadLine();
+            if (int.TryParse(sNum, out A)==true)
+            {
+                Console.WriteLine("Digite um número inteiro: ");
+                string sNum1 = Console.ReadLine();
+                if (int.TryParse(sNum1, out B) == true)
+                {
+                    Console.WriteLine("O número maior é: " + (A > B ? A : B));
+
+                    //if (A > B)
+                    //{
+                    //    Console.WriteLine("O maior número é: " + A);
+                    //}
+                    //else
+                    //{
+                    //    Console.WriteLine("O maior número é: " + B);
+                    //}
+                }
+                else
+                {
+                    Console.WriteLine("Valor inválido!");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Valor inválido!");
+            }        
+           
+
+        }
+        static void testeCondicionalComElse()
+        {
+            Console.Write("Digite um número: par/impar) ");
+            String sNum = Console.ReadLine();
+            int A = int.Parse(sNum);
+            if (A % 2 == 0)
+            {
+                Console.WriteLine(A + " é par. ");
+
+            }
+            else
+            {
+                Console.WriteLine(A + " é impar.");
+            }
+        }
+        static void testeCondicionalSimples()
+        {
+            Console.Write("Digite um número: ");
+            String sNum = Console.ReadLine();
+            int A = int.Parse(sNum);
+            if (A > 0)
+            {
+                Console.WriteLine(A + " é Positivo!");
+            }
+            else
+            {
+                Console.WriteLine(A + " é Negativo!");
+            }
+            if (A == 0)
+            {
+                Console.WriteLine(A + " não é negativo e nem positivo! ");
+            }
+
+        }
+       
+    }
+} 
