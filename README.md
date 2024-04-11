@@ -1,1 +1,1 @@
-Nesse repósitorio eu posto os trabalhos que faço na faculdade de Análise e Desenvolvimento de sistemas nesse primeiro semestre, onde a linguagem ensinada é C#.
+In this repository, I post the assignments I do in the Analysis and Systems Development college course in this first semester, where the taught language is C#.
