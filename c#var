@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PRJVARIAVEL
+{
+    internal class ProgramWHAT
+    {
+        static void Main(string[] args)
+        {
+            int soma=0;
+            Console.WriteLine("Valor da variável soma é: " + soma); // Declaração de uma variável inteira de nome soma.
+            int valorInicial = 1000;
+            int proximoValor = valorInicial + 1;
+
+            Console.WriteLine("Valor da variável proximoValor é: " + proximoValor);
+            // Int valor = "zero";
+
+            //Int pi = 3.1415926535
+
+            //long inicio = 0
+            //int x = inicio;
+
+            //int valor = 4;
+            //int soma2 = valor + 3 + 0,5;
+
+            int a1 = 10;
+            long b1 =  a1;
+
+            Console.WriteLine("Valor da variável b1 é: " + b1);
+
+            long a2 = 20L;
+
+            char a3 = 'A';
+
+            Console.WriteLine("Valor da variável a3 é " + a3);
+            Console.WriteLine("Valor da variável a3 é: " + (int)a3 + 1));
+            Console.WriteLine("Valor da variável a3 é: " + (char)(a3 + 1));
+
+            double a4 = 3.14222222222222222222222222222222222F;
+            Console.WriteLine("Valor da variável a4 é: " + a4);
+
+
+            float a5 = 3.1422222222222222222222222222222222222222222F;
+            Console.WriteLine("Valor da variável a5 é: " + a5);
+
+            String a6 = "Santa Cecília: " + (2020 + 4) + " " + (char)(a3 + 1);
+
+            Console.WriteLine("Valor da variável a6 é: " + a6);
+
+            double a7 = 4.0;
+            int b7 = (int)(a7 * 2);
+            int b8 = (int)(a7 * 2.1);
+
+            Console.WriteLine("Valor da variável b7 é: " + b7)
+            Console.WriteLine("Valor da variável b8 é: " + b8)
