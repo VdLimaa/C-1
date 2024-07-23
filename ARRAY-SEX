@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _17_05
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           
+           ITEM_C();
+           Console.ReadKey();
+        }
+
+        static public float [] quadrado(float[] num)
+        {
+            for (int i = 0; i < num.Length; i++)
+            {
+                num[i] = num[i] * num[i];
+            }
+            return num;
+        }
+
+        static public float digitalFloat()
+        {
+            float num2;
+            Console.WriteLine("Digite um número ");
+            while ((!float.TryParse(Console.ReadLine(), out num2)))
+            {
+                Console.WriteLine("Inválido! Digite um número válido! ");                
+            }
+
+            return num2;
+        }
+
+        static void ITEM_C()
+        {
+            float[] numeros = new float[10];
+
+            for (int i = 0;i < numeros.Length; i++)
+            {
+                numeros[i] = digitalFloat();
+            }
+           
+            quadrado(numeros);
+
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+           
+
+        }
+
+    }
+}
