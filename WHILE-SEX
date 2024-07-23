@@ -1,0 +1,72 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          float ret = exemploWhile();
+           Console.WriteLine("A média dos itens comprados: " + ret);
+            Console.ReadKey();
+
+            float pessoas = exemplodowhile();
+            Console.WriteLine("A média da contribuição das pessoas que ajudaram é: " + pessoas);
+            Console.ReadKey();
+        }
+        static float exemplodowhile()
+        {
+            float total = 0;
+            int numPessoas = 0;
+ 
+
+
+            do
+            {
+                float ajuda;
+                Console.WriteLine("Ajuda a comprar minha passagem? ");
+                string sAjuda = Console.ReadLine();
+                if (float.TryParse(sAjuda, out ajuda) && ajuda > 0)
+                {
+                    total += ajuda;
+                    numPessoas++;
+                }
+} while (total < 200);
+           
+            if (numPessoas > 0)
+            {
+                return total / numPessoas;
+            }
+            return 0;        
+        }
+        static float exemploWhile()
+        {
+            float meuDinheiro = 200;
+            int itens = 0;
+           
+           
+
+            while (meuDinheiro > 0)
+            {
+                float preco;
+                Console.Write("Quanto custa? ");
+                String sPreco = Console.ReadLine();
+                if (float.TryParse(sPreco, out preco) && preco > 0 && meuDinheiro >= preco)
+                {
+                    meuDinheiro -= preco;
+                    itens++;
+                    Console.WriteLine("Sobrou R$: " + meuDinheiro + "!");                    
+                   
+                }    
+
+            }
+
+            return 200 / itens;
+        }
+
+    }
+}
