@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            exercicio02();
+            Console.ReadLine();
+        }
+        static void testeLaco01()
+        {
+            for (int i = 1; i <= 10; i++)  // Laço de 10 vezes
+            {
+                Console.WriteLine("Devo estudar C# todo dia!");
+            }
+        }
+        static void testeLaco02()
+        {
+            int conta = 0, numero;
+            String sNumero;
+            for (int i = 1; i <= 6; i++)   // Laço de 6 vezes
+            {
+                Console.Write("Digite um número par e positivo de ordem " + i + ": ");
+                sNumero = Console.ReadLine();
+                if (int.TryParse(sNumero, out numero) &&
+                    numero > 0 &&
+                    numero % 2 == 0)
+                {
+                    conta++;
+                }
+            }
+            Console.WriteLine("O número de números válidos digitados foi de "
+                + conta + " Números.");
+        }
+
+
+        static void exercicio01()
+        {
+            int somador = 0;
+
+            for (int i = 1000; i <= 2000; i++)
+            {
+                if (i % 2 == 0 && i % 3 != 0)
+                {
+                    somador += i;
+
+
+                }
+
+
+
+
+
+
+
+
+            }
+            Console.WriteLine("A soma de todos os números pares é: " + somador);
+        }
+
+        static void exercicio02()
+        {
+            int conta = 0;
+
+            for (int i = 1000; i <= 10000; i++)
+            {
+                if (i % 3 == 0 && i % 5 != 0)
+                {
+                    conta += i;
+                }
+               
+            }
+            Console.WriteLine("Existem : " + conta + " " + "números multiplos de 3 mas não múltiplo de 5 existem entre 1000 e 10000");
+        }
+    }
+}
