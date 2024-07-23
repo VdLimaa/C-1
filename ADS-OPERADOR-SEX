@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int valor = 12 * 10; // O operador * indica que estamos multiplicando os literais inteiros 12 e 10.
+            int soma = valor + 1000; // O operador + indica que estamos somando a variável valor com o literal inteiro 1000;
+            bool maior = valor > soma; // O operador > (maior)  indica qual operação lógica estamos querendo realizar;
+
+
+            Console.WriteLine("valor : " + valor + " , soma:" + soma + ". Maior? " + maior);
+
+            float divisao1 = 3 / 2L;    // Como divisor e dividendo são ambos inteiros, o valor da variável divisao também é inteiro, portanto vale 1 e não 1.5 (mesmo a variável divisao sendo float);
+            Console.WriteLine("Valor de divisao1: " + divisao1);
+           
+           
+           
+            double divisao2 = 3F / 2F;    // Como o divisor é um float, o resultado aqui será um float também... o resultado agora é um número real, valendo 1.5 como o esperado;
+            Console.WriteLine("Valor de divisao2: " + divisao2);
+
+            int restoA = 20 % 3;  // Ao dividir 20 por 3, o resultado é 6 e sobra 2, portanto o valor de restoA será 2;
+            int restoB = 21 % 3;  // Ao dividir 21 por 3, o resultado é 7 e não sobra nada  portanto o valor de restoB será 0;
+            Console.WriteLine("Valor de restoA: " + restoA);
+            Console.WriteLine("Valor de restoB: " + restoB);
+
+            int x = 10, y = 20;
+            bool respostaX = x > y;             // Neste caso, o valor da variável respostaX será false;
+            Console.WriteLine("RespostaX (false?): " + respostaX);
+            bool respostaY = x + y > x - y;      // Neste caso, o valor da variável respostaY será true;
+            Console.WriteLine("RespostaY (true?): " + respostaY);
+            bool respostaW = 2 * x == y;         // Qual será o valor de respostaC?
+            Console.WriteLine("RespostaW (true?): " + respostaW);
+            bool respostaZ = x != y;                 // E neste caso?
+            Console.WriteLine("RespostaZ (true?): " + respostaZ);
+
+            int a = 10, b = 20, c = 30, d = 100;
+            bool aux = (a + b + c + 40) == d; // aux é true certo?
+            Console.WriteLine("Aux (true?): " + aux);
+            bool respostaA = (a <= b) && (a + b == c);          // a <= b é true, a+b == c é true então (true && true) resulta em true;
+            Console.WriteLine("respostaA (true?): " + respostaA);
+            bool respostaB = (a == b) && (a + b == c);          // a == b é false, a+b == c é true então (false && true) resulta em  false;
+            Console.WriteLine("respostaB (false): " + respostaB);
+            bool respostaC = aux || a == b || !aux || d < a;    // Na sequência de ||s, o primeiro sendo true permite concluir que o resultado em  respostaC é true;
+            Console.WriteLine("respostaC (true?): " + respostaC);
+            bool respostaD = !aux;                              //  aux é true, como tem uma ! antes da variável max, o sentido lógico se inverte e respostaD será false;
+            Console.WriteLine("respostaD (false?): " + respostaD);
+
+            int a1 = 100, b1 = 200, c1 = 300, d1 = 400;
+            a1 += 100;                                              // equivale a expressão: a1 = a1 + 100,  que implica que o valor final de a1 será 200;
+            Console.WriteLine("Valor de a1: (200?): " + a1);
+            b1 *= 2;                                                 // equivale a expressão: b1 = b1 * 2, que implica que o valor final de b1  será 400;
+            Console.WriteLine("Valor de b1: (400?): " + b1);
+            c1 -= 100;                                               // equivale a expressão: c1 = c1 - 100, que implica que o valor final de c1 será 200;
+            Console.WriteLine("Valor de c1: (200?): " + c1);
+            d1 /= 2;                                                 // equivale a expressão: d1 = d1 / 2, que implica que o valor final de d1 será 200;
+            Console.WriteLine("Valor de d1: (200?): " + d1);
+
+            int a2 = 10, b2 = 10, c2 = 10, d2 = 10;
+            int k2 = ++a2;                                                  // A variável k2 valerá 11, o sinal de ++ esta antes do a2, então primeiro incrementa;
+            Console.WriteLine("k2: (11?) " + k2 + "| a2: (11?) " + a2);
+            int l2 = b2++;                                                  // A variável l2 valerá 10 pois primeiro b1 será colocado em l2, depois incrementado;
+            Console.WriteLine("l2: (10?) " + l2 + "| a2: (11?) " + b2);
+            int m2 = --c2;                                                  // A variável m2 valerá 9, o sinal de - - esta antes do c2, então primeiro decrementa;
+            Console.WriteLine("m2: (09?) " + m2 + "| a2: (09?) " + c2);
+            int n2 = d2--;                                                    // A variável n2 valerá 10 pois primeiro d2 será colocado em n2, depois decrementa;
+            Console.WriteLine("n2: (10?) " + n2 + "| a2: (09?) " + d2);
+
+            int a3 = 10, b3 = 20, c3 = 30;
+            int resp1 = (a3 > b3 ? a3 : b3) * (b3 < c3 ? b3 : c3);       // O valor de resp1 será:  20 * 20 ou 400;
+            Console.WriteLine("Valor de resp1: (400?) " + resp1);
+            String resp2 = a3 + b3 == c3 ? "Sim" : "Não";                // Em resp2 teremos “Sim”
+            Console.WriteLine("Valor de resp2: (Sim?) " + resp2);
+
+
+            Console.ReadKey();
